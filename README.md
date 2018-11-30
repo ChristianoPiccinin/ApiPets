@@ -50,32 +50,4 @@ localhost:8080\pets\2
     "sexo": "M"
 }
 
-```
-# Post
-## Executando metodo
-```html
-localhost:8080\pets\2
-```
-## Resultado
-
-```json
-```
-# Put
-## Executando metodo
-```html
-localhost:8080\pets\2
-```
-## Resultado
-
-```json
-```
-# Delete
-## Executando metodo
-```html
-localhost:8080\pets\2
-```
-## Resultado
-
-```json
-```
 
