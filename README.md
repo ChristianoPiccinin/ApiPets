@@ -50,4 +50,41 @@ localhost:8080\pets\2
     "sexo": "M"
 }
 
+# Delete
+## Executando metodo
+```html
+localhost:8080\pets\5
+```
+
+
+# PUT
+## Executando metodo
+```html
+localhost:8080\pets\2
+```
+## Dados
+```json
+{	
+    "nome": "Xazan",
+    "especie":"cachorro",
+    "sexo": "F"
+}
+```
+
+# POST
+## Executando metodo
+```html
+localhost:8080\pets\
+```
+## Dados
+```json
+{	
+    "nome": "Xablau",
+    "especie":"Macaco",
+    "sexo": "M"
+}
+```
+
+
+
 
