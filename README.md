@@ -12,3 +12,45 @@ CREATE TABLE `pets`.`pet` (
   PRIMARY KEY (`id`));
 ```
 
+# Get
+##localhost:8080\pets\
+```json
+[
+    {
+        "id": 1,
+        "nome": "Luck",
+        "especie": "Vira-lata",
+        "sexo": "M"
+    },
+    {
+        "id": 2,
+        "nome": "Mime",
+        "especie": "Gato",
+        "sexo": "M"
+    }
+]
+```
+# Get Id
+##localhost:8080\pets\2
+
+```json
+{
+    "id": 2,
+    "nome": "Mime",
+    "especie": "Gato",
+    "sexo": "M"
+}
+```
+## Post
+
+```json
+```
+## Put
+
+```json
+```
+## Delete
+
+```json
+```
+
