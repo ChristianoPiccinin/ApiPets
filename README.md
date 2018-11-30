@@ -13,10 +13,12 @@ CREATE TABLE `pets`.`pet` (
 ```
 
 # Get
-
+## Executando metedo
 ```html
 localhost:8080\pets\
 ```
+## Resultado
+
 ```json
 [
     {
