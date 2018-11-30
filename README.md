@@ -40,6 +40,7 @@ CREATE TABLE `pets`.`pet` (
     "especie": "Gato",
     "sexo": "M"
 }
+
 ```
 ## Post
 
