@@ -28,19 +28,26 @@ public class PetsController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/pets/{id}",method = GET, produces = "application/json")
-	public Pets get(@PathVariable int id) {
+	public ResponseEntity<?> get(@PathVariable int id) {
 		PetsDAO dao = new PetsDAO();
 		
-		return dao.get(id);
+		Pets p = dao.get(id);
+		if(p == null) {
+			return ResponseEntity.notFound().build();
+		}
+		
+		return ResponseEntity.ok(p);
+		
+		
 	}
 	
 	@ResponseBody
 	@RequestMapping(value = "/pets",method = POST, produces = "application/json")
-	public ResponseEntity<?> add(@RequestBody Pets Pets) {
-		System.out.println(Pets);
+	public ResponseEntity<?> add(@RequestBody Pets pets) {
 		PetsDAO dao = new PetsDAO();
-		dao.insert(Pets);
-		return ResponseEntity.ok().build();
+		dao.insert(pets);
+		return  ResponseEntity.ok().build();
+	
 	}
 	
 	@ResponseBody
@@ -57,9 +64,11 @@ public class PetsController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/pets/{id}",method = PUT, produces = "application/json")
-	public ResponseEntity<?> putPet(@PathVariable int id, Pets pet) {
+	public ResponseEntity<?> putPet(@PathVariable int id,@RequestBody  Pets pet) {
 		PetsDAO dao = new PetsDAO();
 		try {
+			System.out.println(pet);
+			pet.setId(id);
 			dao.putByPet(pet);
 		}catch(Exception e) {
 			return ResponseEntity.notFound().build();

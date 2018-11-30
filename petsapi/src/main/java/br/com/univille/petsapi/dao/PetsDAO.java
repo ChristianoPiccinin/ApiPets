@@ -35,13 +35,14 @@ public class PetsDAO extends ConnectionFactory{
 		
 	public Pets get(int id){
 		
-		Pets pet = new Pets();
+		Pets pet = null;
 		try{
 			Connection connection = getConnection();
 			PreparedStatement stmt = connection.prepareStatement("select id, nome, especie, sexo from pet where id = ?");
 			stmt.setInt(1, id);
 			ResultSet resultSet = stmt.executeQuery();
-			while(resultSet.next()){
+			if(resultSet.next()){
+				pet = new Pets();
 				pet.setId(resultSet.getInt(1));
 				pet.setNome(resultSet.getString(2));
 				pet.setEspecie(resultSet.getString(3));
