@@ -13,7 +13,10 @@ CREATE TABLE `pets`.`pet` (
 ```
 
 # Get
-##localhost:8080\pets\
+
+```html
+localhost:8080\pets\
+```
 ```json
 [
     {
@@ -31,7 +34,7 @@ CREATE TABLE `pets`.`pet` (
 ]
 ```
 # Get Id
-##localhost:8080\pets\2
+## localhost:8080\pets\2
 
 ```json
 {
@@ -42,15 +45,15 @@ CREATE TABLE `pets`.`pet` (
 }
 
 ```
-## Post
+# Post
 
 ```json
 ```
-## Put
+# Put
 
 ```json
 ```
-## Delete
+# Delete
 
 ```json
 ```
